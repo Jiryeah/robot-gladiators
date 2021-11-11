@@ -18,7 +18,7 @@ var fight = function() {
     var promptFight = window.prompt("Would you to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
     // if player choses to fight , then fight 
-    if (promptFight === "fight" || promptFight === "FIGHT")
+    if (promptFight === "fight" || promptFight === "FIGHT") {
         //Subtract the value of 'playerAttack' from the value of 'enemyHealth' and use that result to update the value in the 'enemyHealth' variable
         enemyHealth = enemyHealth - playerAttack;
         // Log a resulting message to the console so we know that it worked. 
@@ -62,6 +62,8 @@ var fight = function() {
         else {
             fight();
         }
+    } else {
+        window.alert( "You need to pick a valid option. Try again!");
     }
 };
 
