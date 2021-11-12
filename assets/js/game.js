@@ -73,7 +73,8 @@ var fight = function(enemy) {
 var startGame = function() {
     // reset player stats
     playerInfo.reset();
-    
+
+    // fight each enemy robot in order by looping through them 
     for(var i = 0; i < enemyInfo.length; i++) {
         // if player is still alive, keep fighting
         if (playerInfo.health > 0) {
@@ -159,7 +160,7 @@ var shop = function() {
             
             // do nothing, so function will end
             break;
-            default:
+        default:
                 window.alert("You did not pick a valid option. Try again.");
 
             // call shop() again to force player to pick a valid option 
@@ -214,6 +215,8 @@ var enemyInfo = [
         attack: randomNumber(10, 14)
     }
 ];
+
+
 
 // start the game when the page loads 
 startGame();
