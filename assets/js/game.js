@@ -1,3 +1,4 @@
+// Game Functions
 
 // funtion to generate a random numeric value
 var randomNumber = function(min, max) {
@@ -105,14 +106,11 @@ var fight = function(enemy) {
 var startGame = function() {
     // reset player stats
     playerInfo.reset();
-<<<<<<< HEAD
-
-    // fight each enemy robot in order by looping through them 
-    for(var i = 0; i < enemyInfo.length; i++) {
-=======
     
     for (var i = 0; i < enemyInfo.length; i++) {
->>>>>>> develop
+        // checking player stats
+        console.log(playerInfo);
+
         // if player is still alive, keep fighting
         if (playerInfo.health > 0) {
             // let player what round they are in, remeber that arrays start at 0 so it needs to ahve 1 added to it
@@ -205,11 +203,7 @@ var shop = function() {
             // do nothing, so function will end
             break;
         default:
-<<<<<<< HEAD
-                window.alert("You did not pick a valid option. Try again.");
-=======
             window.alert("You did not pick a valid option. Try again.");
->>>>>>> develop
 
             // call shop() again to force player to pick a valid option 
             shop();
@@ -228,6 +222,10 @@ var getPlayerName = function() {
     console.log("Your robot's name is " + name);
     return name;
 };
+
+// End of Game Functions
+
+// Game Information / Variables
 
 var playerInfo = {
     name: getPlayerName(),
@@ -274,7 +272,7 @@ var enemyInfo = [
     }
 ];
 
-
+// End of Game Information / Variables 
 
 // start the game when the page loads 
 startGame();
